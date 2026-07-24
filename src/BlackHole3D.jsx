@@ -402,8 +402,8 @@ export default function BlackHole3D() {
 
   return (
     <SplitLayoutWrapper>
-    <div className="flex flex-row gap-4 items-start" style={{ flexWrap: 'nowrap' }}>
-      <div style={{ flex: '1 1 0%', minWidth: 0 }}>
+    <div className="flex gap-4 items-start" style={{ flexWrap: 'wrap' }}>
+      <div style={{ flex: '1 1 360px', minWidth: 280 }}>
         <div ref={mountRef} className="w-full rounded-lg overflow-hidden" style={{ height: enlarged ? 800 : 560, cursor: 'grab' }} />
 
         <div className="mt-3 flex flex-wrap gap-2">
@@ -456,7 +456,7 @@ export default function BlackHole3D() {
       </div>
 
       {showPlots && (
-        <div style={{ width: 300, flexShrink: 0 }}>
+        <div style={{ flex: '1 1 280px', minWidth: 260, maxWidth: 340 }}>
           <RelationPlots mass={mass} spin={spin} />
         </div>
       )}
